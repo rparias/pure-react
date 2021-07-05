@@ -8,9 +8,14 @@
     <title>Adopt me</title>
   </head>
   <body>
-    <div class="root">not rendered</div>
+    <div id="root">not rendered</div>
     <script src="https://unpkg.com/react@17.0.1/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react@17.0.1/umd/react-dom.development.js"></script>
-    <script></script>
+    <script src="https://unpkg.com/react-dom@17.0.1/umd/react-dom.development.js"></script>
+    <script>
+      const App = () => {
+        return React.createElement('div', {}, React.createElement('h1', {id: 'my-logo'}, 'Adpot me!'));
+      }
+      ReactDOM.render(React.createElement(App), document.getElementById("root"));
+    </script>
   </body>
 </html>
