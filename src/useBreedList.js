@@ -25,7 +25,6 @@ export default function useBreedList(animal) {
 
       const jsonBreeds = await res.json();
       localCache[animal] = jsonBreeds.breeds || [];
-      console.log("hola", jsonBreeds);
       setBreedList(localCache[animal]);
       setStatus("loaded");
     }
